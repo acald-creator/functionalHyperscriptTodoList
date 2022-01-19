@@ -3,12 +3,12 @@
  *
  */
 
-const merge = require('webpack-merge');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const common = require('./webpack.common.js');
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+import merge from 'webpack-merge';
+import UglifyJSPlugin from 'uglifyjs-webpack-plugin';
+import common from './webpack.common.js';
+import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin";
 
-module.exports = merge(common, {
+export default merge(common, {
   optimization: {
     minimizer: [
       new UglifyJSPlugin({
