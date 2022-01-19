@@ -11,8 +11,10 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
     hot: true, // Tell the dev-server we're using HMR
-    contentBase: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    static: {
+      directory: path.resolve(__dirname, 'dist'),
+      publicPath: '/'
+    }
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({
