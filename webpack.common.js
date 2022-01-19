@@ -4,7 +4,7 @@
  */
 var webpack = require('webpack');
 var path = require('path');
-var CleanWebpackPlugin = require('clean-webpack-plugin');
+var { CleanWebpackPlugin } = require('clean-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 //const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -26,7 +26,7 @@ module.exports = {
     publicPath: '/'
   },
   plugins: [  
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "[name].css", //"styles.css"
       chunkFilename: "[id].css"
